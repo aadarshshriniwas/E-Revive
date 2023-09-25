@@ -4,13 +4,14 @@ import 'package:e_revive_app/features/auth/screens/auth_screen.dart';
 import 'package:e_revive_app/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:e_revive_app/router.dart';
-
+import 'package:e_revive_app/features/home/screens/home_screen.dart';
 import 'package:e_revive_app/constants/error_handling.dart';
 import 'package:e_revive_app/features/auth/services/auth_service.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(MultiProvider(
+
     providers: [
       ChangeNotifierProvider(
         create: (context) => UserProvider(),
