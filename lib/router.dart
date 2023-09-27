@@ -26,7 +26,7 @@ Route<dynamic> generateRoute(RouteSettings routeSettings)
     case InfoScreen.routeName:
       return MaterialPageRoute(
         settings: routeSettings,
-        builder: (_)=>const InfoScreen(),
+        builder: (_)=>InfoScreen(),
       );
     default:
       return MaterialPageRoute(
