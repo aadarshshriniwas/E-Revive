@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 // import 'package:e_revive_app/providers/user_provider.dart';
 // import '../../../constants/global_variables.dart';
 // import 'package:provider/provider.dart';
+import 'package:e_revive_app/features/home/services/info_services.dart';
 import 'package:e_revive_app/features/account/screens/profile_menu.dart';
 import 'package:e_revive_app/features/account/screens/profile_pic.dart';
 class AccountScreen extends StatefulWidget {
@@ -48,7 +49,9 @@ class _AccountScreenState extends State<AccountScreen> {
           ProfileMenu(
             text: "Log Out",
             icon: "assets/icons/Log out.svg",
-            press: () {},
+            press: () {
+              AccountServices().logOut(context);
+            },
           ),
           SizedBox(height: 50,),
           Text("Team E_Revive",style: TextStyle(fontSize:15,fontWeight: FontWeight.w300),),
