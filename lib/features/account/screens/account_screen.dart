@@ -17,14 +17,18 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  int supercoinBalance = 128;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
+
           SizedBox(height: 60,),
           ProfilePic(),
+          SizedBox(height: 20),
+          SupercoinsBox(supercoinBalance: supercoinBalance), // Add the SupercoinsBox here
           SizedBox(height: 20),
           ProfileMenu(
             text: "My Account",
@@ -55,6 +59,39 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
           SizedBox(height: 50,),
           Text("Team E_Revive",style: TextStyle(fontSize:15,fontWeight: FontWeight.w300),),
+        ],
+      ),
+    );
+  }
+}
+class SupercoinsBox extends StatelessWidget {
+  final int supercoinBalance; // Pass the user's supercoin balance here
+
+  SupercoinsBox({required this.supercoinBalance});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.blue, // Customize the box color
+        borderRadius: BorderRadius.circular(10),
+      ),
+      padding: EdgeInsets.all(10),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            Icons.star, // You can use any icon representing supercoins
+            color: Colors.yellow, // Customize the icon color
+          ),
+          SizedBox(width: 5),
+          Text(
+            'Supercoins: $supercoinBalance', // Display the supercoin balance here
+            style: TextStyle(
+              color: Colors.white, // Customize the text color
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );

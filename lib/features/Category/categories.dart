@@ -9,15 +9,15 @@ class _CategoryScreenState extends State<CategoryScreen> {
   final List<CategoryItem> categories = [
     CategoryItem(
       title: 'Small Electronics',
-      imageAsset: 'assets/recycle-items-brown-wooden-textured-background.jpg', // Replace with your image assets
+      imageAsset: 'assets/assortment-dirty-dumped-objects.jpg', // Replace with your image assets
     ),
     CategoryItem(
       title: 'Mobiles and Gadgets',
-      imageAsset: 'assets/helloo.jpg', // Replace with your image assets
+      imageAsset: 'assets/assortment-dirty-dumped-objects (1).jpg', // Replace with your image assets
     ),
     CategoryItem(
       title: 'Industrial Waste',
-      imageAsset: 'assets/20944237.jpg', // Replace with your image assets
+      imageAsset: 'assets/distant-shot-port-with-boats-loaded-with-cargo-shipment-during-nighttime.jpg', // Replace with your image assets
     ),
     // Add more CategoryItem instances as needed
   ];
