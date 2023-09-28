@@ -6,7 +6,7 @@ import 'package:e_revive_app/providers/user_provider.dart';
 ///import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:e_revive_app/features/Category/categories.dart';
 import '../../features/account/screens/account_screen.dart';
 
 class BottomBar extends StatefulWidget {
@@ -25,7 +25,7 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget> pages = [
     const HomeScreen(),
     const AccountScreen(),
-   // const CartScreen(),
+     CategoryScreen(),
   ];
 
   void updatePage(int page) {
