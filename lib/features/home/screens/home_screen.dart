@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:math';
+import 'package:e_revive_app/features/Map/map_screen.dart';
 import 'package:e_revive_app/constants/global_variables.dart';
 class HomeScreen extends StatefulWidget {
   static const String routeName='/home';
@@ -156,7 +157,7 @@ SizedBox(height: 30,),
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => InfoScreen()),
+                          MaterialPageRoute(builder: (context) => MapPage()),
                         );
                       },
                     ),

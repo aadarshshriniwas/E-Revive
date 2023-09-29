@@ -32,27 +32,27 @@ class _AccountScreenState extends State<AccountScreen> {
           SizedBox(height: 20),
           ProfileMenu(
             text: "My Account",
-            icon: "assets/icons/User Icon.svg",
+            icon: "assets/pngegg (18).png",
             press: () => {},
           ),
           ProfileMenu(
             text: "Notifications",
-            icon: "assets/icons/Bell.svg",
+            icon: "assets/pngegg (19).png",
             press: () {},
           ),
           ProfileMenu(
             text: "Settings",
-            icon: "assets/icons/Settings.svg",
+            icon: "assets/pngegg (20).png",
             press: () {},
           ),
           ProfileMenu(
             text: "Help Center",
-            icon: "assets/icons/Question mark.svg",
+            icon: "assets/pngegg (21).png",
             press: () {},
           ),
           ProfileMenu(
             text: "Log Out",
-            icon: "assets/icons/Log out.svg",
+            icon: "assets/pngegg(22).png",
             press: () {
               AccountServices().logOut(context);
             },

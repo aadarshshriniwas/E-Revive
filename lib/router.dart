@@ -1,4 +1,5 @@
 import 'package:e_revive_app/common/widgets/bottom_bar.dart';
+import 'package:e_revive_app/features/Map/map_screen.dart';
 import 'package:e_revive_app/features/auth/screens/auth_screen.dart';
 import 'package:e_revive_app/features/home/screens/home_screen.dart';
 import 'package:e_revive_app/features/home/screens/info_screen.dart';
@@ -27,6 +28,11 @@ Route<dynamic> generateRoute(RouteSettings routeSettings)
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_)=>InfoScreen(),
+      );
+    case MapPage.routeName:
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_)=>MapPage(),
       );
     default:
       return MaterialPageRoute(
