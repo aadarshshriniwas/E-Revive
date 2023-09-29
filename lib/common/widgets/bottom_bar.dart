@@ -24,8 +24,9 @@ class _BottomBarState extends State<BottomBar> {
 
   List<Widget> pages = [
     const HomeScreen(),
+    CategoryScreen(),
     const AccountScreen(),
-     CategoryScreen(),
+
   ];
 
   void updatePage(int page) {
@@ -83,7 +84,8 @@ class _BottomBarState extends State<BottomBar> {
                 ),
               ),
               child: const Icon(
-                Icons.person_outline_outlined,
+                Icons.category_outlined,
+
               ),
             ),
             label: '',
@@ -107,7 +109,7 @@ class _BottomBarState extends State<BottomBar> {
              //   badgeContent: Text(userCartLen.toString()),
               //  badgeColor: Colors.white,
                 child: const Icon(
-                  Icons.category_outlined,
+                  Icons.person_outline_outlined,
                 ),
               ),
             ),
