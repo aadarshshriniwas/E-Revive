@@ -97,111 +97,114 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
-              children: [
-                Container(
-                  height: 250,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('assets/background_image.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 250,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Colors.black.withOpacity(0.5), Colors.transparent],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Got E-waste?',
-                        style: TextStyle(
-                          fontSize: 40.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'You came to the right place!',
-                        style: TextStyle(
-                          fontSize: 22.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bg.jpg'),
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 16),
-            CarouselSlider(
-              options: CarouselOptions(
-                height: 200.0,
-                autoPlay: true,
-                enlargeCenterPage: true,
-                viewportFraction: 1.0,
-                aspectRatio: 3.0,
-              ),
-              items: [
-                Image.asset('assets/20944237.jpg', fit: BoxFit.cover),
-                Image.asset('assets/assortment-dirty-dumped-objects (1).jpg', fit: BoxFit.cover),
-                Image.asset('assets/robot-with-trash-recycle-symbol.jpg', fit: BoxFit.cover),
-                Image.asset('assets/helloo.jpg', fit: BoxFit.cover),
-                Image.asset('assets/john-cameron-7zocFMzvbpc-unsplash.jpg', fit: BoxFit.cover),
-                // Add more images or videos here
-              ],
-            ),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                  child: Text('Know E-waste'),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => InfoScreen()),
-                    );
-                  },
-                ),
-                ElevatedButton(
-                  child: Text('Recycle Now'),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MapPage()),
-                    );
-                  },
-                ),
-              ],
-            ),
-            SizedBox(height: 85),
-            Center(
-              child: InkWell(
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  Container(
+                    height: 250,
 
-                child: Text(
-                  "Learn more about Team E-Revive",
-                  style: TextStyle(
-                    color: Colors.blue,
-                    decoration: TextDecoration.underline,
+                  ),
+                  Container(
+                    height: 250,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Colors.black.withOpacity(0.8), Colors.transparent],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Got E-waste?',
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'You came to the right place!',
+                          style: TextStyle(
+                            fontSize: 22.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16),
+              CarouselSlider(
+                options: CarouselOptions(
+                  height: 200.0,
+                  autoPlay: true,
+                  enlargeCenterPage: true,
+                  viewportFraction: 1.0,
+                  aspectRatio: 3.0,
+                ),
+                items: [
+                  Image.asset('assets/20944237.jpg', fit: BoxFit.cover),
+                  Image.asset('assets/assortment-dirty-dumped-objects (1).jpg', fit: BoxFit.cover),
+                  Image.asset('assets/robot-with-trash-recycle-symbol.jpg', fit: BoxFit.cover),
+                  Image.asset('assets/helloo.jpg', fit: BoxFit.cover),
+                  Image.asset('assets/john-cameron-7zocFMzvbpc-unsplash.jpg', fit: BoxFit.cover),
+                  // Add more images or videos here
+                ],
+              ),
+              SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    child: Text('Know E-waste'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => InfoScreen()),
+                      );
+                    },
+                  ),
+                  ElevatedButton(
+                    child: Text('Recycle Now'),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MapPage()),
+                      );
+                    },
+                  ),
+                ],
+              ),
+              SizedBox(height: 85),
+              Center(
+                child: InkWell(
+
+                  child: Text(
+                    "Team E-Revive",
+                    style: TextStyle(
+                      color: Colors.black,
+                      decoration: TextDecoration.none,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:e_revive_app/features/Category/small.dart';
+import 'package:e_revive_app/features/Category/mobiles.dart';
+import 'package:e_revive_app/features/Category/industry.dart';
 class CategoryScreen extends StatefulWidget {
   @override
   _CategoryScreenState createState() => _CategoryScreenState();
@@ -16,7 +18,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
       imageAsset: 'assets/assortment-dirty-dumped-objects (1).jpg', // Replace with your image assets
     ),
     CategoryItem(
-      title: 'Industrial Waste',
+      title: 'Large Appliances',
       imageAsset: 'assets/distant-shot-port-with-boats-loaded-with-cargo-shipment-during-nighttime.jpg', // Replace with your image assets
     ),
     // Add more CategoryItem instances as needed
@@ -33,11 +35,8 @@ class _CategoryScreenState extends State<CategoryScreen> {
         itemCount: categories.length,
         itemBuilder: (context, index) {
           final category = categories[index];
-          return InkWell(
-            onTap: () {
-              // Handle category item tap, e.g., navigate to a category-specific page
-              _handleCategoryTap(category);
-            },
+          return GestureDetector(
+            onTap: () => _handleCategoryTap(category), // Call the handler with the selected category
             child: Container(
               height: 200, // Adjust the container height as needed
               margin: EdgeInsets.all(10), // Add margin for spacing
@@ -66,13 +65,37 @@ class _CategoryScreenState extends State<CategoryScreen> {
   }
 
   void _handleCategoryTap(CategoryItem category) {
-    // Handle category item tap here, e.g., navigate to a category-specific page
-    // For demonstration, we'll show a snackbar
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Selected Category: ${category.title}'),
-      ),
-    );
+    // Perform different actions based on the selected category
+    switch (category.title) {
+      case 'Small Electronics':
+      // Action for Small Electronics category
+        print('Tapped Small Electronics');
+        // Navigate to a specific page, e.g., Small()
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Small()),
+        );
+        break;
+      case 'Mobiles and Gadgets':
+      // Action for Mobiles and Gadgets category
+        print('Tapped Mobiles and Gadgets');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =>Mobile()),
+        );
+        // Add your action here
+        break;
+      case 'Large Appliances':
+      // Action for Industrial Waste category
+        print('Tapped Industrial Waste');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Industry()),
+        );
+        // Add your action here
+        break;
+    // Add more cases for other categories as needed
+    }
   }
 }
 
