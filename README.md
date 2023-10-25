@@ -8,7 +8,6 @@ An application for finding nearby e-waste recycling facilities using Flutter, No
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## About
@@ -41,21 +40,20 @@ To run this project locally, follow these steps:
    $ git clone https://github.com/yourusername/ewaste-facility-locator.git
    $ cd ewaste-facility-locator
 2.Install Flutter dependencies:
-```bash
   $ flutter pub get
+3.Set up the Node.js backend:
   $ cd backend
   $ npm install
+4.Configure the MongoDB connection in the Node.js backend.
+5.Start the backend server:
   $ npm start
+6.Start the Flutter app:
   $ flutter run
+  ### Usage
+1.Open the E-Waste Facility Locator app on your mobile device.
+2.Allow the app to access your location.
+3.Browse the map to discover nearby e-waste recycling facilities.
+4.Tap on a facility to view details and get directions.
+5.Use the search feature to filter facilities by location or accepted e-waste items.
 
-### usage
-Usage
-Open the E-Waste Facility Locator app on your mobile device.
 
-Allow the app to access your location.
-
-Browse the map to discover nearby e-waste recycling facilities.
-
-Tap on a facility to view details and get directions.
-
-Use the search feature to filter facilities by location or accepted e-waste items.
